@@ -128,7 +128,7 @@ async function handleRequest(request) {
   console.log(path)
   if(!path){
 
-    const html= await fetch("https://pcctw168.github.io/Url-Shorten-Worker/"+config.theme+"/index.html")
+    const html= await fetch("https://xyTom.github.io/Url-Shorten-Worker/"+config.theme+"/index.html")
     
     return new Response(await html.text(), {
     headers: {
@@ -150,7 +150,7 @@ async function handleRequest(request) {
 
   if (location) {
     if (config.no_ref=="on"){
-      let no_ref= await fetch("https://pcctw168.github.io/Url-Shorten-Worker/no-ref.html")
+      let no_ref= await fetch("https://xyTom.github.io/Url-Shorten-Worker/no-ref.html")
       no_ref=await no_ref.text()
       no_ref=no_ref.replace(/{Replace}/gm, location)
       return new Response(no_ref, {
